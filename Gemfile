@@ -42,6 +42,8 @@ end
 
 gem 'webmock'
 
+gem 'rails_12factor'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
