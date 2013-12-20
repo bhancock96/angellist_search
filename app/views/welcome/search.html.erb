@@ -1,0 +1,28 @@
+<header>
+	<% if flash[:notice] %>
+			<p class='flash'><%= flash[:notice] %></p>
+		<% end %>
+	<h1>Results</h1>
+	<%= link_to "Search for another Company", root_url %>
+</header>
+
+<% if @matched_company %>
+<div class='details'>
+	<h2><%= @matched_company['name'] %></h2>
+	<p class='description'><%= @matched_company['product_desc']%></p>
+	<%= image_tag @matched_company['thumb_url'] %>
+	<p><%= @matched_company['high_concept'] %></p>
+	<p>City:
+	<%= @matched_company['locations'].first['display_name'] %></p>
+	<p>AngelList Url: <a href='<%=@matched_company['angellist_url']%>'><%=@matched_company['angellist_url']%></a></p>
+	<div class='markets'>
+		<h3>Markets</h3>
+		<ul>
+		<% @matched_company['markets'].each do |market| %>
+				<li><%= market['name'] %></li>
+			</ul>
+		<% end %>	
+	</div>
+</div>
+
+<% end %>

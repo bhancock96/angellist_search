@@ -1,0 +1,10 @@
+<div class='search_box'>
+<h1>AngelList Search</h1>
+
+<%= form_tag search_url, method: :get, :id => 'search' do %>
+	<%= label_tag "Website"%>
+	<%= search_field_tag :site %>
+	<%= submit_tag "Search AngelList" %>
+	<p>(Enter a link to your website(e.g. visible.vc or http://www.visible.vc) and click the button to get some info about it from AngelList)</p>
+<% end %>
+</div>
