@@ -40,7 +40,6 @@ group :test, :development do
 	gem 'rspec-rails'
 end
 
-gem 'webmock'
 
 gem 'rails_12factor'
 
