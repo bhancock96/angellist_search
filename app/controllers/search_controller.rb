@@ -1,8 +1,8 @@
-class WelcomeController < ApplicationController
+class SearchController < ApplicationController
 	def index
 	end
 
-	def search
+	def compare
 		website = Website.new(params[:site])
 		if website.search['company_url'] == nil
 			flash[:notice] = 'This company does not have a company url listed'
