@@ -38,9 +38,11 @@ gem 'better_errors'
 
 group :test, :development do
 	gem 'rspec-rails'
-	gem 'webmock'
 end
 
+group :test do
+	gem 'webmock'
+end
 
 gem 'rails_12factor'
 
