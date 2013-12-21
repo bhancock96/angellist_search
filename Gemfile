@@ -38,6 +38,7 @@ gem 'better_errors'
 
 group :test, :development do
 	gem 'rspec-rails'
+	gem 'webmock'
 end
 
 
